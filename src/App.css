@@ -37,3 +37,11 @@
     background-size: contain;
     background-attachment: fixed;
 }
+
+
+@media(max-width:830px){
+    #first-section{
+        background-position: 45% 70%;
+        background-size: 200%;
+    }
+}

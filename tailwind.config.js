@@ -12,6 +12,9 @@ export default {
       screens:{
         '1300px':'1300px',
         '1400px':'1400px',
+        '1147px':'1147px',
+        '720px':'720px',
+        '830px':'830px',
       }
     },
   },

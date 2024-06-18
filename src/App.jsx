@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import image from "./assets/images/image-2.jpg";
 import "./App.css";
 import { CiInstagram, CiLinkedin } from "react-icons/ci";
-import { BiLogoFacebook, BiLogoInstagramAlt } from "react-icons/bi";
+import { BiCloset, BiLogoFacebook, BiLogoInstagramAlt } from "react-icons/bi";
 import { FaFacebook, FaLinkedin, FaLinkedinIn } from "react-icons/fa";
 import { MdFacebook } from "react-icons/md";
 import { PiInstagramLogo } from "react-icons/pi";
@@ -13,6 +13,7 @@ import imag1 from "./assets/images/image-1.jpg";
 import ribbon from "./assets/images/ribbon.svg";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { CgClose } from "react-icons/cg";
 
 function App() {
   const headingTitle = useRef(null);
@@ -38,6 +39,8 @@ function App() {
   const bottomFifthSectionPara = useRef(null);
   //  ---------------------------------------
 
+
+ 
   const socialMediaSection = useRef();
 
   useGSAP(() => {
@@ -135,16 +138,24 @@ function App() {
       opacity: 0,
     });
     //---------------------------
+
+
+   
+
+    // sidebar.current.pause();
+
   });
 
   return (
     <main>
       <Header />
 
+   
+
       <section className="relative text-white font-fritz-regular w-full h-screen">
         <p
           ref={headingTitle}
-          className="absolute top-40 left-6  text-black max-w-[400px] font-light  font-fritz-regular text-3xl w-full"
+          className="text-shadow absolute 830px:p-0 p-[16px] backdrop-blur-[15px] 830px:backdrop-filter-none 830px:top-40 top-36 left-6  text-black max-w-[400px] font-light  font-fritz-regular text-3xl w-full"
         >
           Your gateway to exclusive private jet services
         </p>
@@ -182,7 +193,7 @@ function App() {
           </div>
           <div
             ref={bottomFirstSectionPara}
-            className="flex-[67%] flex flex-col justify-between items-center text-clip text-sm h-full"
+            className="flex-[67%] overflow-hidden flex flex-col justify-between items-center text-clip text-sm h-full"
           >
             <p className="pb-4">
               At our esteemed workshop, we provide an extensive range of
@@ -237,7 +248,7 @@ function App() {
           </div>
           <div
             ref={bottomFirstSectionPara}
-            className="flex-[67%] flex flex-col justify-between items-center text-clip text-sm h-full"
+            className="flex-[67%] overflow-hidden flex flex-col justify-between items-center text-clip text-sm h-full"
           >
             <p className="pb-4">
               At our esteemed workshop, we provide an extensive range of
@@ -292,7 +303,7 @@ function App() {
           </div>
           <div
             ref={bottomThirdSectionPara}
-            className="flex-[67%] flex flex-col justify-between items-center text-clip text-sm h-full"
+            className="flex-[67%] flex overflow-hidden flex-col justify-between items-center text-clip text-sm h-full"
           >
             <p className="pb-4">
               At our esteemed workshop, we provide an extensive range of
@@ -316,7 +327,7 @@ function App() {
         <div id="fourth-section" className="w-full h-full relative">
           <form
             action=""
-            className=" bg-[#3C3C3B] px-6 pt-3 pb-1 rounded-tl-[20px] rounded-br-[20px] w-[580px] h-fit top-44 absolute right-20"
+            className="720px:block hidden bg-[#3C3C3B] px-6 pt-3 pb-1 rounded-tl-[20px] rounded-br-[20px] 720px:w-[580px] w-[90%] m-auto h-fit top-40  720px:top-44 absolute right-0 720px:right-20"
           >
             <div className="flex justify-between items-center my-2">
               <label htmlFor="" className="w-[140px]">
@@ -367,8 +378,64 @@ function App() {
 
             <button className="absolute bottom-4 left-6 uppercase">Sent</button>
           </form>
+
+
+
+          <form
+            action=""
+            className="720px:hidden block bg-[#3C3C3B] px-6 pt-3 pb-1 rounded-tl-[20px] absolute top-32 left-7 rounded-br-[20px] w-[90%] h-fit "
+          >
+            <div className="flex justify-between items-center my-2">
+              <label htmlFor="" className="w-[140px] text-[#D79B2A]">
+                Name
+              </label>
+              <input
+                className=" text-black px-4 w-full rounded-tl-[20px] rounded-br-[20px] py-1"
+                type="number"
+              />
+            </div>
+            <div className="flex justify-between items-center my-2">
+              <label htmlFor="" className="w-[140px] text-[#D79B2A]">
+                Company
+              </label>
+              <input
+                className=" text-black px-4 w-full rounded-tl-[20px] rounded-br-[20px] py-1"
+                type="text"
+              />
+            </div>
+            <div className="flex justify-between items-center my-2">
+              <label htmlFor="" className="w-[140px] text-[#D79B2A]">
+                Mob./Cell Ph.
+              </label>
+              <input
+                className=" text-black px-4 w-full rounded-tl-[20px] rounded-br-[20px] py-1"
+                type="tel"
+              />
+            </div>
+            <div className="flex justify-between items-center my-2">
+              <label htmlFor="" className="w-[140px] text-[#D79B2A]">
+                Email ID
+              </label>
+              <input
+                className=" text-black px-4 w-full rounded-tl-[20px] rounded-br-[20px] py-1"
+                type="email"
+              />
+            </div>
+            <div className="flex justify-between items-start my-2">
+              <label htmlFor="" className="w-[140px] text-[#D79B2A]">
+                Message
+              </label>
+              <textarea
+                name=""
+                className="text-black px-4 w-full h-[130px] rounded-tl-[20px] rounded-br-[20px] py-1"
+                id=""
+              ></textarea>
+            </div>
+
+            <button className="absolute bottom-4 left-6 uppercase text-[#D79B2A]">Sent</button>
+          </form>
         </div>
-        <div className="  bg-black/70 h-[160px] px-6 absolute flex py-5 justify-between w-full bottom-0 left-0 right-0">
+        <div className="  bg-black/70 h-[160px] px-4 absolute flex py-5 justify-between w-full bottom-0 left-0 right-0">
           <div
             ref={bottomFourthSection}
             className="flex-[38%] relative gap-2 h-full flex flex-col justify-end items-start"
@@ -401,7 +468,7 @@ function App() {
           </div>
           <div
             ref={bottomFourthSectionPara}
-            className="flex-[67%] flex flex-col justify-center items-center text-clip text-sm h-full"
+            className="flex-[67%] overflow-hidden flex flex-col justify-center items-center text-clip text-sm h-full"
           >
             <p className="">
               Over the years, we have undergone a transformation fueled by
