@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+      font-family: "FritzRegular";
+      src: url("./assets/Fonts/FritzRegular.otf") format("opentype");
+    }
+  }
+body{
+    font-family: 'fritz-regular';
+    background-color: black;
+}

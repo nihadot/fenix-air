@@ -1,0 +1,39 @@
+*{
+    scroll-behavior: smooth;
+}
+#first-section{
+    background-image: url(/src/assets/images/image-2.jpg);
+    background-repeat: no-repeat;
+    background-position: 0% 66%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#second-section{
+    background-image: url(/src/assets/images/image-4.jpg);
+    background-repeat: no-repeat;
+    background-position: 0% 55%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#third-section{
+    background-image: url(/src/assets/images/image-1.jpg);
+    background-repeat: no-repeat;
+    background-position: 0% 43%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#fourth-section{
+    background-image: url(/src/assets/images/image-3.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+}
+#fifth-section{
+    background-image: url(/src/assets/images/image-5.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    background-attachment: fixed;
+}
