@@ -155,7 +155,7 @@ function App() {
       <section className="relative text-white font-fritz-regular w-full h-screen">
         <p
           ref={headingTitle}
-          className="text-shadow absolute 830px:p-0 p-[16px] backdrop-blur-[15px] 830px:backdrop-filter-none 830px:top-40 top-36 left-6  text-black max-w-[400px] font-light  font-fritz-regular text-3xl w-full"
+          className="text-shadow 830px:text-[30px] text-[24px] absolute 830px:p-0 p-[16px] backdrop-blur-[15px] 830px:backdrop-filter-none 830px:top-40 top-36 left-6 right-6  text-black max-w-[400px] font-light  font-fritz-regular text-3xl w-[88%]"
         >
           Your gateway to exclusive private jet services
         </p>
