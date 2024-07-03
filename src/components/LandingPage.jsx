@@ -4,6 +4,8 @@ import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
 import { MdFacebook } from 'react-icons/md'
 import { PiInstagramLogo } from 'react-icons/pi'
 import { useNavigate } from 'react-router-dom';
+import bgimage from "../assets/images/LandingPageBackground.svg";
+
 
 function LandingPage() {
 
@@ -23,7 +25,7 @@ function LandingPage() {
     className="w-full relative h-screen font-fritz-regular"
   >
     <img
-      src="../src/assets/images/LandingPageBackground.svg"
+      src={bgimage}
       className="w-[100%]  overflow-hidden h-[100vh] object-cover hidden md:block"
     />
     <div className={'w-full h-full bg-black/65 md:hidden block'}></div>
