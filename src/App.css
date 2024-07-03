@@ -25,10 +25,10 @@
     background-attachment: fixed;
 }
 #fourth-section{
-    background-image: url(/src/assets/images/image-3.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
+    /* background-image: url(/src/assets/images/image-3.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-size: contain; */
+    /* background-attachment: fixed; */
 }
 #fifth-section{
     background-image: url(/src/assets/images/image-5.jpg);
@@ -45,3 +45,41 @@
         background-size: 200%;
     }
 }
+
+.text-shadow{
+    text-shadow: rgb(255, 252, 252) 1px 1px;
+}
+
+#bg{
+    background-image: url("/src/assets/images/image-2.jpg");
+    background-repeat: no-repeat;
+    background-position: left 27%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.img{
+    /* -moz-text-blink: ; */
+    /* mix-blend-mode: color; */
+}
+
+@media(max-width:1000px){
+    #bg{
+        background-position: left 0%;
+    }
+}
+
+
+@media(max-width:700px){
+    #bg{
+        background-position: left -60%;
+        background-size: 100% 100%;
+    }
+   
+}
+
+@media(max-width:600px){
+    #bg{
+        
+    }
+}
+

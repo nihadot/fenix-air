@@ -4,7 +4,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from './App';
 import './index.css';
 import { ThreeDots } from 'react-loader-spinner';
-
+import LandingPage from "./components/LandingPage"
+import Charters from "./components/Charters"
+import Svg from './components/Svg';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const Root = () => {
   const [loading, setLoading] = useState(true); // Initial loading state
 
@@ -31,7 +35,14 @@ const Root = () => {
       ) : (
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<App />} />
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/svg" element={<Svg />} />
+            <Route path="/cargo" element={<Charters />} />
+            <Route path="/airtaxi" element={<Charters />} />
+            <Route path="/airambulance" element={<Charters />} />
+            <Route path="/flight-school" element={<Charters />} />
+            <Route path="/helicopter" element={<Charters />} />
+            
           </Routes>
         </BrowserRouter>
       )}
