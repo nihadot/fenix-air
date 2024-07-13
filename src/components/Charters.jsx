@@ -10,6 +10,8 @@ import SectionOne from "./Charters/SectionOne";
 import SectionTwo from "./Charters/SectionTwo";
 import SectionThree from "./Charters/SectionThree";
 import SectionFour from "./Charters/SectionFour";
+import SectionFive from "./Charters/SectionFifth";
+
 
 function Charters() {
  
@@ -66,16 +68,13 @@ function Charters() {
       <SectionTwo/>
       <SectionThree/>
       <SectionFour setContactForm={setContactForm} contactForm={contactForm}/>
-     
+     <SectionFive/>
 
     
 
     
 
-      <section className="relative text-white font-fritz-regular w-full h-screen">
-        <div id="fifth-section" className="w-full h-full"></div>
-      
-      </section>
+   
     </main>
   );
 }

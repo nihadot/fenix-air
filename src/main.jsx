@@ -9,6 +9,7 @@ import Charters from "./components/Charters"
 import Svg from './components/Svg';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import FlightSchool from "./components/FlightSchool/FlightSchool"
 const Root = () => {
   const [loading, setLoading] = useState(true); // Initial loading state
 
@@ -40,7 +41,7 @@ const Root = () => {
             <Route path="/cargo" element={<Charters />} />
             <Route path="/airtaxi" element={<Charters />} />
             <Route path="/airambulance" element={<Charters />} />
-            <Route path="/flight-school" element={<Charters />} />
+            <Route path="/flight-school" element={<FlightSchool />} />
             <Route path="/helicopter" element={<Charters />} />
             
           </Routes>

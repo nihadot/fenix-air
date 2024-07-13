@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-
+import "./index.css"
 function SectionThree() {
 
   const [bgFixed, setBgFixed] = useState(false);
@@ -38,7 +38,12 @@ function SectionThree() {
 
   return (
     <section className="relative text-white font-fritz-regular w-full h-screen">
-        <div ref={divRef} id="charters-section3" className={`w-full h-full ${bgFixed ? 'bg-fixed ' : ''} `}></div>
+        <div ref={divRef} id={'section3'} className={`w-full h-full ${bgFixed ? 'bg-fixed ' : ''} `}></div>
+        <p
+        className=" 830px:text-[25px] text-[24px] absolute 830px:p-0 p-[16px]   830px:top-40 992px:top-36 top-32 992px:left-6 left-2 right-6  text-black max-w-[400px] font-light  font-fritz-regular text-3xl w-[88%]"
+      >
+        Our Affiliate Services
+      </p>
       </section>
   )
 }

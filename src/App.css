@@ -1,7 +1,7 @@
 *{
     scroll-behavior: smooth;
 }
-#first-section{
+#charters-section1{
     background-image: url(/src/assets/images/image-2.jpg);
     background-repeat: no-repeat;
     background-position: 0% 66%;
@@ -9,28 +9,21 @@
     background-attachment: fixed;
 }
 
-#second-section{
+#charters-section2{
     background-image: url(/src/assets/images/image-4.jpg);
     background-repeat: no-repeat;
     background-position: 0% 55%;
     background-size: cover;
-    background-attachment: fixed;
 }
 
-#third-section{
+#charters-section3{
     background-image: url(/src/assets/images/image-1.jpg);
     background-repeat: no-repeat;
     background-position: 0% 43%;
     background-size: cover;
-    background-attachment: fixed;
 }
-#fourth-section{
-    /* background-image: url(/src/assets/images/image-3.jpg); */
-    /* background-repeat: no-repeat; */
-    /* background-size: contain; */
-    /* background-attachment: fixed; */
-}
-#fifth-section{
+
+#charters-section5{
     background-image: url(/src/assets/images/image-5.jpg);
     background-repeat: no-repeat;
     background-position: right;
@@ -40,7 +33,7 @@
 
 
 @media(max-width:830px){
-    #first-section{
+    #charters-section1{
         background-position: 45% 70%;
         background-size: 200%;
     }

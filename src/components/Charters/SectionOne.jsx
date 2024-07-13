@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ribbon from "../../assets/images/ribbon.svg";
@@ -14,6 +14,8 @@ function SectionOne({index}) {
   const bottomFirstSection = useRef(null);
   const bottomFirstSectionPara = useRef(null);
   // ---------------------------------------
+
+  const [readMore,setReadMore] = useState(false);
 
 
   useGSAP(() => {
@@ -59,7 +61,7 @@ function SectionOne({index}) {
         >
           Your gateway to exclusive private jet services
         </p>
-        <div id="first-section" className="w-full h-full"></div>
+        <div id="charters-section1" className="w-full h-full"></div>
         <div
           ref={bottomFirstSection}
           className=" bg-black/70  z-50 h-[160px] px-6 fixed flex py-5 justify-between w-full bottom-0 left-0 right-0"
@@ -73,7 +75,7 @@ function SectionOne({index}) {
             <div className="absolute gap-2 h-full flex flex-col justify-end items-start">
               <FaWhatsapp
                 className="bg-yellow-500 transition-all w-6 h-6 rounded-md p-1 cursor-pointer hover:duration-700 hover:ease-in-out hover:delay-200"
-                color="#fff"
+                color="#000"
                 size={24}
                 title="Whatsapp"
               />
@@ -82,7 +84,7 @@ function SectionOne({index}) {
                   socialMediaLink("https://www.instagram.com/fenixair.in/")
                 }
                 className="bg-yellow-500 transition-all w-6 h-6 rounded-md p-1 cursor-pointer hover:duration-700 hover:ease-in-out hover:delay-200"
-                color="#fff"
+                color="#000"
                 size={24}
                 title="Instagram"
               />
@@ -91,7 +93,7 @@ function SectionOne({index}) {
                 socialMediaLink("https://www.facebook.com/fenixair.in/")
               }}
                 className="bg-yellow-500 w-6 h-6 rounded-md p-1 cursor-pointer hover:duration-700 hover:ease-in-out hover:delay-200"
-                color="#fff"
+                color="#000"
                 size={24}
                 title="Facebook"
               />
@@ -100,7 +102,7 @@ function SectionOne({index}) {
                 socialMediaLink("https://www.linkedin.com/company/fenix-air-private-limited/?originalSubdomain=in")
               }}
                 className="bg-yellow-500 w-6 h-6 rounded-md p-1 cursor-pointer hover:duration-700 hover:ease-in-out hover:delay-200"
-                color="#fff"
+                color="#000"
                 size={24}
                 title="LinkedIn"
               />
@@ -109,10 +111,20 @@ function SectionOne({index}) {
           <div
             ref={bottomFirstSectionPara}
             id="paragraph"
-            className="flex-[67%] overflow-auto flex flex-col justify-between items-center text-clip text-sm h-full"
+            className="flex-[67%] pe-6 break-all overflow-auto flex flex-col justify-between items-center text-sm h-full"
           >
-            <p className="pb-4 ">{arr[index]?.textOne}</p>
-            <p>{arr[index]?.textTwo}</p>
+            { readMore === false && <p>{ arr[index]?.textOne?.length > 800 ? 
+            <>
+            {arr[index]?.textOne?.slice(0, 800) }
+            <span onClick={()=>setReadMore(true)} className='text-[#D79B2A] block'>Read more ...</span>
+            </>
+            : arr[index]?.textOne}</p>}
+           { readMore && 
+           <div className="">
+              <p className="pb-4 ">{arr[index]?.textOne}</p>
+              <p className='text-[#D79B2A] block' onClick={()=>setReadMore(false)}>Read less...</p>
+           </div>
+          }
           </div>
         </div>
       </section>

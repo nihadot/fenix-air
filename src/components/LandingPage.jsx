@@ -5,7 +5,7 @@ import { MdFacebook } from 'react-icons/md'
 import { PiInstagramLogo } from 'react-icons/pi'
 import { useNavigate } from 'react-router-dom';
 import bgimage from "../assets/images/LandingPageBackground.svg";
-
+import commingSoonPage from "../assets/images/launching-soon.jpg"
 
 function LandingPage() {
 
@@ -47,10 +47,14 @@ function LandingPage() {
          
         </div>
 
+        <div className=" pt-52">
+         <img src={commingSoonPage} alt="" />
+        </div>
+
         <div className=" gap-2 h-full z-50 flex justify-end  flex-col">
         <FaWhatsapp
                 className="bg-yellow-500 transition-all w-7 h-7 rounded-md p-1 cursor-pointer hover:duration-700 hover:ease-in-out hover:delay-200"
-                color="#fff"
+                color="#000"
                 size={26}
                 title="Whatsapp"
               />
@@ -59,7 +63,7 @@ function LandingPage() {
                   socialMediaLink("https://www.instagram.com/fenixair.in/")
                 }
             className="bg-yellow-500 transition-all w-7 h-7 rounded-md p-1 cursor-pointer hover:duration-700 hover:ease-in-out hover:delay-200"
-            color="#fff"
+            color="#000"
             size={26}
             title="Instagram"
           />
@@ -68,7 +72,7 @@ function LandingPage() {
                 socialMediaLink("https://www.facebook.com/fenixair.in/")
               }}
             className="bg-yellow-500 w-7 h-7 rounded-md p-1 cursor-pointer hover:duration-700 hover:ease-in-out hover:delay-200"
-            color="#fff"
+            color="#000"
             size={26}
             title="Facebook"
           />
@@ -77,13 +81,13 @@ function LandingPage() {
                 socialMediaLink("https://www.linkedin.com/company/fenix-air-private-limited/?originalSubdomain=in")
               }}
             className="bg-yellow-500 w-7 h-7 rounded-md p-1 cursor-pointer hover:duration-700 hover:ease-in-out hover:delay-200"
-            color="#fff"
+            color="#000"
             size={25}
             title="LinkedIn"
           />
         </div>
       </div>
-      <div className="flex-[40%] relative flex  flex-col justify-between py-24 md:py-20 items-center">
+      <div className="flex-[40%] relative flex  flex-col justify-between pt-16 ps-10 992px:ps-0 py-36 md:py-20 items-center">
         <img
           src="../src/assets/images/logo.svg"
           alt=""
@@ -103,18 +107,18 @@ function LandingPage() {
           </span>
         </h1>
 
-        <div className="">
-          <ul className=" relative flex gap-6 text-[16px] font-fritz-regular transition-all ease-in-out duration-200 ">
+        <div className="w-full">
+          <ul className=" relative flex 992px:gap-6 gap-3 w-full 992px:text-[16px] text-[14px] ps-3 992px:ps-0 font-fritz-regular transition-all ease-in-out duration-200 ">
             <li onClick={()=> {
               setLandingPageButtonOne(!landingPageButtonOne)
-            } } className="hover:text-[#D79B2A] flex items-center gap-1 group">
+            } } className="hover:text-[#D79B2A] flex items-center  gap-1 group">
               Charters{" "}
               <span>
                 { !landingPageButtonOne ? <IoMdArrowDropdown className="mt-1" /> : <IoMdArrowDropup/>}
               </span>
               {landingPageButtonOne && (
                 <div className="group-hover:block  hover:block absolute top-10 left-0 md:-left-[90px] h-full">
-                  <ul className="flex text-[15px] text-white/80 gap-5">
+                  <ul className="flex 992px:flex-row flex-col text-[14px] text-white/80 992px:gap-5 gap-2 bg-black 992px:bg-transparent p-3">
                     <li className="hover:text-[#D79B2A]" onClick={()=>navigator('/cargo')}>Private Jet</li>
                     <li className="hover:text-[#D79B2A]" onClick={()=>navigator('/airtaxi')}>Air Taxi</li>
                     <li className="hover:text-[#D79B2A]" onClick={()=>navigator('/airambulance')}>Air Ambulance</li>
@@ -170,10 +174,10 @@ function LandingPage() {
           ></div>
   </div>
 
-  <div className=' h-[70px] absolute bottom-0 md:hidden justify-center items-center flex flex-row gap-1 left-4 w-[100px]'>
+  <div className='  h-[70px] absolute bottom-0 md:hidden justify-center items-center flex flex-row gap-1 left-4 w-[100px]'>
   <FaWhatsapp
                 className="bg-yellow-500 transition-all w-5 h-5 rounded-md p-1 cursor-pointer hover:duration-700 hover:ease-in-out hover:delay-200"
-                color="#fff"
+                color="#000"
                 size={26}
                 title="Whatsapp"
               />
@@ -182,7 +186,7 @@ function LandingPage() {
                   socialMediaLink("https://www.instagram.com/fenixair.in/")
                 }
             className="bg-yellow-500 transition-all w-5 h-5 rounded-md p-[3px] cursor-pointer hover:duration-700 hover:ease-in-out hover:delay-200"
-            color="#fff"
+            color="#000"
             size={26}
             title="Instagram"
           />
@@ -191,7 +195,7 @@ function LandingPage() {
                 socialMediaLink("https://www.facebook.com/fenixair.in/")
               }}
             className="bg-yellow-500 transition-all w-5 h-5 rounded-md p-[4px] cursor-pointer hover:duration-700 hover:ease-in-out hover:delay-200"
-            color="#fff"
+            color="#000"
             size={26}
             title="Facebook"
           />
@@ -200,7 +204,7 @@ function LandingPage() {
                 socialMediaLink("https://www.linkedin.com/company/fenix-air-private-limited/?originalSubdomain=in")
               }}
             className="bg-yellow-500 transition-all w-5 h-5 rounded-md p-[4px] cursor-pointer hover:duration-700 hover:ease-in-out hover:delay-200"
-            color="#fff"
+            color="#000"
             size={26}
             title="LinkedIn"
           />

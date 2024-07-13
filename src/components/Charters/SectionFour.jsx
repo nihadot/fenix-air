@@ -46,33 +46,11 @@ function SectionFour({ contactForm, setContactForm }) {
     <section className="relative text-white font-fritz-regular w-full h-[120vh] lg:h-screen">
       <video className="lg:w-[60%] w-full h-full object-cover" src={BgVideo} autoPlay loop muted  />
 
-      <div id="fourth-section" className="w-full absolute top-0 left-0 h-full ">
+      <div id="charters-section4" className="w-full absolute top-0 left-0 h-full ">
         {/* desktop form */}
 
         <div>
-          <div
-            className="hidden 720px:flex  w-[330px] justify-center items-center rounded-[5px] h-[40px] bg-[#3C3C3B] absolute right-[50%] overflow-hidden top-[100px]"
-            style={{ transform: "translate(50%, 0%)" }}
-          >
-            <div
-              onClick={() => setContactForm(true)}
-              className={`flex-1 h-full  text-[16px] flex justify-center items-center ${
-                contactForm && "bg-black/25"
-              } cursor-pointer `}
-            >
-              Enquiry
-            </div>
-
-            <div
-              onClick={() => setContactForm(false)}
-              className={`flex-1  text-[16px] flex justify-center items-center ${
-                !contactForm && "bg-black/25"
-              }  h-full cursor-pointer `}
-            >
-              Booking
-            </div>
-          </div>
-
+         
           {contactForm ? (
             <form
               onSubmit={handleEnquiry}
@@ -158,7 +136,7 @@ function SectionFour({ contactForm, setContactForm }) {
               className="720px:block hidden bg-[#3C3C3B] px-6 pt-3 pb-1 rounded-tl-[20px] rounded-br-[20px] 720px:w-[580px] w-[90%] m-auto h-[400px] top-40  720px:top-44 absolute right-0 720px:right-20"
             >
               <div className="flex justify-between items-center my-2">
-                <label htmlFor="" className="w-[140px] text-[#D79B2A]">
+                <label htmlFor="" className="w-[165px] text-[#D79B2A]">
                   Name
                 </label>
                 <input
@@ -171,7 +149,7 @@ function SectionFour({ contactForm, setContactForm }) {
                 />
               </div>
               <div className="flex justify-between items-center my-2">
-                <label htmlFor="" className="w-[140px] text-[#D79B2A]">
+                <label htmlFor="" className="w-[165px] text-[#D79B2A]">
                   Email ID
                 </label>
                 <input
@@ -184,7 +162,7 @@ function SectionFour({ contactForm, setContactForm }) {
                 />
               </div>
               <div className="flex justify-between items-center my-2">
-                <label htmlFor="" className="w-[140px] text-[#D79B2A]">
+                <label htmlFor="" className="w-[165px] text-[#D79B2A]">
                   Phone Number
                 </label>
                 <input
@@ -197,7 +175,7 @@ function SectionFour({ contactForm, setContactForm }) {
                 />
               </div>
               <div className="flex justify-between items-center my-2">
-                <label htmlFor="" className="w-[140px] text-[#D79B2A]">
+                <label htmlFor="" className="w-[165px] text-[#D79B2A]">
                   Departure Date
                 </label>
                 <input
@@ -210,7 +188,7 @@ function SectionFour({ contactForm, setContactForm }) {
                 />
               </div>
               <div className="flex justify-between items-start my-2">
-                <label htmlFor="" className="w-[140px] text-[#D79B2A]">
+                <label htmlFor="" className="w-[165px] text-[#D79B2A]">
                   Departure
                 </label>
                 <input
@@ -223,7 +201,7 @@ function SectionFour({ contactForm, setContactForm }) {
                 />
               </div>
               <div className="flex justify-between items-start my-2">
-                <label htmlFor="" className="w-[140px] text-[#D79B2A]">
+                <label htmlFor="" className="w-[165px] text-[#D79B2A]">
                   Arrival
                 </label>
                 <input
@@ -236,12 +214,12 @@ function SectionFour({ contactForm, setContactForm }) {
                 />
               </div>
               <div className="flex justify-between items-start my-2">
-                <label htmlFor="" className="w-[140px] text-[#D79B2A]">
-                  Luggage
+                <label htmlFor="" className="w-[165px] text-[#D79B2A]">
+                  No. Of Luggage
                 </label>
                 <input
                   required
-                  placeholder="Luggage Size"
+                  placeholder="No. Of Luggage"
                   className="w-full px-3 text-black rounded-tl-[20px] rounded-br-[20px] py-1"
                   value={bookingFormNoOfLuggage}
                   type="text"
@@ -249,7 +227,7 @@ function SectionFour({ contactForm, setContactForm }) {
                 />
               </div>
               <div className="flex justify-start items-start my-2 text-black">
-                <label htmlFor="" className="w-[110px] text-[#D79B2A]">
+                <label htmlFor="" className="w-[125px] text-[#D79B2A]">
                   Luggage Size
                 </label>
                 <select
@@ -277,28 +255,7 @@ function SectionFour({ contactForm, setContactForm }) {
         {/* desktop form */}
 
         {/* mobile */}
-        <div
-          className="w-[330px] 720px:hidden  justify-center items-center rounded-t-[20px] h-[40px] bg-[#3C3C3B] absolute right-[50%] flex overflow-hidden top-[89px]"
-          style={{ transform: "translate(52%, 0%)" }}
-        >
-          <div
-            onClick={() => setContactForm(true)}
-            className={`flex-1 h-full  text-[16px] flex justify-center items-center ${
-              contactForm && "bg-black/25"
-            } cursor-pointer `}
-          >
-            Enquiry
-          </div>
-
-          <div
-            onClick={() => setContactForm(false)}
-            className={`flex-1  text-[16px] flex justify-center items-center ${
-              !contactForm && "bg-black/25"
-            }  h-full cursor-pointer `}
-          >
-            Booking
-          </div>
-        </div>
+     
         {contactForm ? (
           <form
           onSubmit={handleEnquiry}
@@ -373,7 +330,7 @@ function SectionFour({ contactForm, setContactForm }) {
         ) : (
           <form
           onSubmit={handleBooking}
-            className="720px:hidden block bg-[#3C3C3B] px-6 pt-3 pb-1 rounded-tl-[20px] absolute top-32 left-7 rounded-br-[20px] w-[90%] h-[420px] "
+            className="720px:hidden block bg-[#3C3C3B] px-6 pt-3 pb-1 rounded-tl-[20px] absolute top-32 left-7 rounded-br-[20px] w-[90%] h-[455px] "
           >
 
             <div className="flex justify-between items-center my-2">
@@ -456,11 +413,11 @@ function SectionFour({ contactForm, setContactForm }) {
               </div>
               <div className="flex justify-between items-start my-2">
                 <label htmlFor="" className="w-[140px] text-[#D79B2A]">
-                  Luggage
+                No. Of Luggage
                 </label>
                 <input
                   required
-                  placeholder="Luggage Size"
+                  placeholder="No. Of Luggage"
                   className="w-full px-3 text-black rounded-tl-[20px] rounded-br-[20px] py-1"
                   value={bookingFormNoOfLuggage}
                   type="text"
@@ -468,7 +425,7 @@ function SectionFour({ contactForm, setContactForm }) {
                 />
               </div>
               <div className="flex justify-start items-start my-2 text-black">
-                <label htmlFor="" className="w-[110px] text-[#D79B2A]">
+                <label htmlFor="" className="w-[90px] text-[#D79B2A]">
                   Luggage Size
                 </label>
                 <select
